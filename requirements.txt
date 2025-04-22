@@ -3,11 +3,8 @@ pypdf2
 langchain
 langchain-openai
 langchain-community
-langchain-huggingface
-python-dotenv
 faiss-cpu
 openai
-huggingface_hub
 tiktoken
 sentence-transformers
 watchdog

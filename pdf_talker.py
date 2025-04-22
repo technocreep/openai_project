@@ -1,9 +1,8 @@
 import streamlit as st
-from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
-from langchain_community.vectorstores import FAISS
-from langchain_openai.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+from langchain.embeddings import OpenAIEmbeddings
 from langchain.memory import ConversationBufferMemory
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
 
@@ -71,9 +70,7 @@ def handle_user_input(user_question):
             st.write(bot_template.replace("{{MSG}}", message.content), unsafe_allow_html=True)
 
 
-def main():
-    load_dotenv()
-      
+def main():      
     st.set_page_config(page_title='Chat PDF',
                        page_icon=':books:')
     
